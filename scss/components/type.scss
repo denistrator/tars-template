@@ -10,6 +10,7 @@ $link-decoration: none !default;
 $link-decoration-hover: none!default;
 $heading-font-family: inherit !default;
 $heading-font-weight: 700 !default;
+$heading-font-transform: initial !default;
 $heading-color: inherit !default;
 
 $heading-font-size-1: 36px !default;
@@ -69,6 +70,7 @@ h6,
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     color: $heading-color;
+    text-transform: $heading-font-transform;
 }
 
 h1,

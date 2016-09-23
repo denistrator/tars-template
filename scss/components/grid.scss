@@ -31,7 +31,12 @@ $breakpoint: (
     @media all and (min-width: $val) {
         @for $i from 1 through $grid-columns {
             .col-#{$key}-#{$i} {
-                width: 100 / $grid-columns * $i + %;
+                width: 100% / $grid-columns * $i;
+            }    
+        }
+        @for $i from 1 through $grid-columns {
+            .col-#{$key}-offset-#{$i} {
+                margin-left: 100% / $grid-columns * $i;
             }
         }
     }

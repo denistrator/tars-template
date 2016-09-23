@@ -5,7 +5,7 @@ $form-border-radius: 2px !default;
 $form-height: 44px !default;
 $form-padding-x: 20px !default;
 $form-font-size: 14px !default;
-$form-line-height: 2 !default;
+$form-line-height: 1.4 !default;
 $form-margin-bottom: 15px !default;
 
 $form-label-color: #eaeef1 !default;
@@ -34,6 +34,22 @@ $form-label-margin-bottom: 4px !default;
     &:focus:-ms-input-placeholder { color: transparent; }
 }
 
+
+@mixin form-variants($color, $bg, $border-color) {
+    color: $color;
+    background-color: $bg;
+    border-color: $border-color;
+}
+
+@mixin form-size($height, $padding, $font-size, $border-radius: $form-border-radius, $line-height: $form-line-height) {
+    $padding-y: ($height - ($font-size * $form-line-height)) / 2;
+    font-size: $font-size;
+    border-radius: $border-radius;
+    height: $height;
+    line-height: $line-height;
+    padding: $padding-y $padding;
+}
+
 .form {
     &-group {
         margin-bottom: $form-margin-bottom;
@@ -47,7 +63,7 @@ $form-label-margin-bottom: 4px !default;
         border: $form-border;
         border-radius: $form-border-radius;
         height: $form-height;
-        line-height: 1.4;
+        line-height: $form-line-height;
         $padding-y: ($form-height - ($form-font-size * $form-line-height)) / 2;
         padding: $padding-y $form-padding-x;
         @include placeholder(#fff);

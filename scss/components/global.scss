@@ -1,5 +1,6 @@
 $container-max-width: 960px !default;
-$container-padding: 0 10px !default;
+$container-padding-y: 0 !default;
+$container-padding-x: 10px !default;
 
 html {
 	box-sizing: border-box;
@@ -24,6 +25,10 @@ img {
 div[class $="logo-holder"],
 div[class $="img-holder"] {
 	font-size: 0;
+}
+
+ul {
+	list-style-position: inside;
 }
 
 .js-fine-align-landscape {
@@ -60,7 +65,7 @@ div[class $="img-holder"] {
 .container {
 	margin: 0 auto;
 	max-width: $container-max-width;
-	padding: $container-padding;
+	padding: $container-padding-y $container-padding-x;
 }
 
 .header {
