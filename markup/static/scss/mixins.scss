@@ -8,6 +8,10 @@
     list-style-position: outside;
 }
 
+%nl {
+    @include nl;
+}
+
 @mixin cf {
     &:before,
     &:after {
@@ -24,65 +28,40 @@
     }
 }
 
-@mixin blocks-justify {
-    text-align: justify;
-    text-justify: newspaper;
+%cf {
+    @include cf;
 }
 
 // You can add your own mixins here:
 
-%no-text-list-styles {
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    list-style: none;
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
 }
 
-%no-text-list-styles li {
-    font-size: initial;
+@function in-perc($val, $width: strip-unit($container-max-width - $container-gutter)){
+    @return ($val / $width * 100%);
 }
 
-%clearfix {
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
+@mixin abs-fill ($offset:0){
+    position: absolute;
+    top: $offset;
+    bottom: $offset;
+    left: $offset;
+    right: $offset;
+    width: 100%;
+    height: 100%;
+} 
+%abs-fill { @include abs-fill; }
 
-%simple-anim {
-    transition: all .25s linear;
-}
-
-@mixin indent-reset($val) {
-    @if $val == left {
-        margin-left: 0;
-        padding-left: 0;
-    }
-    @if $val == rigth {
-        margin-rigth: 0;
-        padding-rigth: 0;
-    }
-    @if $val == top {
-        margin-top: 0;
-        padding-top: 0;
-    }
-    @if $val == bottom {
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    @if $val == all {
-        margin: 0;
-        padding: 0;
-    }
-    @if null {
-        
-    }
-}
-
-@function find-the-proportion($width, $height) {
-  @return $width / $height * 100%;
-}
+@mixin table-fill {
+    display: table;
+    width: 100%;
+    height: 100%;
+} 
+%table-fill { @include table-fill; }
