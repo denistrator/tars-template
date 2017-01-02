@@ -18,3 +18,5 @@ phantomjsdriver.log
 
 *.cfg
 backup/
+docs/
+files/
