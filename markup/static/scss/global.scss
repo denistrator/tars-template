@@ -1,7 +1,3 @@
-$container-max-width: 960px !default;
-$container-padding-y: 0 !default;
-$container-padding-x: 10px !default;
-
 html {
 	box-sizing: border-box;
 }
@@ -12,23 +8,21 @@ html {
 	box-sizing: inherit;
 }
 
-body {
+html, body, .wrapper {
 	margin: 0;
 	padding: 0;
+	min-height: 100%;
+	min-height: 100vh;
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 img {
 	max-width: 100%;
 	height: auto;
-}
-
-div[class $="logo-holder"],
-div[class $="img-holder"] {
-	font-size: 0;
-}
-
-ul {
-	list-style-position: inside;
 }
 
 .js-fine-align-landscape {
@@ -52,28 +46,4 @@ ul {
     max-width: none;
     width: 100%;
     margin: auto;
-}
-
-.wrapper {
-	overflow: hidden;
-	display: table;
-	width: 100%;
-	height: 100vh;
-	table-layout: fixed;
-}
-
-.container {
-	margin: 0 auto;
-	max-width: $container-max-width;
-	padding: $container-padding-y $container-padding-x;
-}
-
-.header {
-	display: table-header-group;
-	height: 1%;
-}
-
-.footer {
-	display: table-footer-group;
-	height: 1%;
 }

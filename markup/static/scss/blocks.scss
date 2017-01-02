@@ -1,15 +1,3 @@
-$block-padding-y:       20px !default;
-$block-padding-x:       0 !default;
-
-$block-padding-y-xs:    5px !default;
-$block-padding-x-xs:    0 !default;
-
-$block-padding-y-sm:    15px !default;
-$block-padding-x-sm:    0 !default;
-
-$block-padding-y-lg:    30px !default;
-$block-padding-x-lg:    0 !default;
-
 $block-inverse-color:   #fff !default;
 $block-title-size:      36px !default;
 $block-description-size:24px !default;
@@ -17,24 +5,24 @@ $block-description-size:24px !default;
 $block-image-size:      cover !default;
 $block-image-position:  50% 50% !default;
 
-$opacity-lg:            0.9 !default;
-$opacity-md:            0.8 !default;
-$opacity-sm:            0.4 !default;
-$opacity-xs:            0.2 !default;
+$overlay-opacity:            0.65 !default;
 
-%block-absolute {
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	> .block-inner {
-		display: block;
+$block-title-size:      28px !default;
+$block-description-size:15px !default;
+
+$bg-dark: #212121;
+$bg-light: #eee;
+
+.bg {
+	&-dark {
+		background-color: $bg-dark;
+	}
+	&-light {
+		background-color: $bg-light;
 	}
 }
 
-
 .block {
-	padding: $block-padding-y $block-padding-x;
 	display: table;
 	width: 100%;
 	table-layout: fixed;
@@ -57,17 +45,6 @@ $opacity-xs:            0.2 !default;
 		.h1,.h2,.h3,.h4,.h5,.h6 {
 			color: inherit;
 		}
-		a {
-			color: inherit;
-		}
-	}
-	&-absolute-top {
-		@extend %block-absolute;
-		top: 0;
-	}
-	&-absolute-bottom {
-		@extend %block-absolute;
-		bottom: 0;
 	}
 	&-overlay {
 		position: relative;
@@ -82,27 +59,8 @@ $opacity-xs:            0.2 !default;
 			height: 100%;
 			z-index: -1;
 			background-color: inherit;
-			opacity: $opacity-md;
+			opacity: $overlay-opacity;
 		}
-		&-opacity-lg {
-			&:after {
-				opacity: $opacity-lg;
-			}
-		}
-		&-opacity-sm {
-			&:after {
-				opacity: $opacity-sm;
-			}
-		}
-		&-opacity-xs {
-			&:after {
-				opacity: $opacity-xs;
-			}
-		}
-	}
-	&-relative {
-		position: relative;
-		z-index: 2;
 	}
 
 	// childs
@@ -134,21 +92,19 @@ $opacity-xs:            0.2 !default;
 			float: left;
 		}
 	}
-	&-title {
-		font-size: $block-title-size;
-	}
-	&-description {
-		font-size: $block-description-size;
-	}
 
-	// size
-	&-xs {
-		padding: $block-padding-y-xs $block-padding-x-xs;
+	&-title {
+		&:not(.prevent-ta){
+			text-align: center;
+		}
+		font-size: $block-title-size;
+		margin: 0;
 	}
-	&-sm {
-		padding: $block-padding-y-sm $block-padding-x-sm;
-	}
-	&-lg {
-		padding: $block-padding-y-lg $block-padding-x-lg;
+	&-desc {
+		&:not(.prevent-ta){
+			text-align: center;
+		}
+		font-size: $block-description-size;
+		margin: 0;
 	}
 }

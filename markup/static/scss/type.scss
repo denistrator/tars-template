@@ -31,8 +31,6 @@ $heading-margin-5: 1em !default;
 $heading-font-size-6: 12px !default;
 $heading-margin-6: 1em !default;
 
-
-
 body {
     color: $body-color;
     background-color: $body-bg;
@@ -55,56 +53,40 @@ a {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+.h1,.h2,.h3,.h4,.h5,.h6,
+ h1, h2, h3, h4, h5, h6 {
     font-family: $heading-font-family;
     font-weight: $heading-font-weight;
     color: $heading-color;
     text-transform: $heading-font-transform;
 }
 
-h1,
-.h1 {
+h1, .h1 {
     font-size: $heading-font-size-1;
     margin: $heading-margin-1;
 }
 
-h2,
-.h2 {
+h2, .h2 {
     font-size: $heading-font-size-2;
     margin: $heading-margin-2;
 }
 
-h3,
-.h3 {
+h3, .h3 {
     font-size: $heading-font-size-3;
     margin: $heading-margin-3;
 }
 
-h4,
-.h4 {
+h4, .h4 {
     font-size: $heading-font-size-4;
     margin: $heading-margin-4;
 }
 
-h5,
-.h5 {
+h5, .h5 {
     font-size: $heading-font-size-5;
     margin: $heading-margin-5;
 }
 
-h6,
-.h6 {
+h6, .h6 {
     font-size: $heading-font-size-6;
     margin: $heading-margin-6;
 }
