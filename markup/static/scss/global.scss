@@ -29,21 +29,22 @@ img {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-    left: -50%;
-    right: -50%;
-    height: 100%;
-    max-width: none;
-    width: auto;
     margin: auto;
 }
 .js-fine-align-portrait {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: -100%;
-    bottom: -100%;
-    height: auto;
-    max-width: none;
-    width: 100%;
-    margin: auto;
+	display: block;
+	margin: auto;
+	max-height: 100%;
+}
+
+.ver-indents {
+	&-parent {
+		// overflow: hidden; // remove?
+		margin-top: -$grid-gutter / 2;
+		margin-bottom: -$grid-gutter / 2;
+	}
+	&-child {
+		padding-top: $grid-gutter / 2;
+		padding-bottom: $grid-gutter / 2;
+	}
 }

@@ -1,5 +1,7 @@
 $btn-color: #333 !default;
 $btn-font-size: 16px !default;
+$btn-font-family: sans-serif !default;
+$btn-font-weight: normal !default;
 $btn-bg: #ddd !default;
 $btn-border: 1px solid $btn-bg !default;
 $btn-border-radius: 4px !default;
@@ -39,13 +41,16 @@ $btn-border-color-hover: #ddd !default;
     -webkit-user-select: none;
             user-select: none;
     cursor: pointer;
-    font-weight: normal;
-    color: $btn-color;
+    font-family: $btn-font-family;
+    font-weight: $btn-font-weight;
     font-size: $btn-font-size;
+    color: $btn-color;
     background: $btn-bg;
     border: $btn-border;
     border-radius: $btn-border-radius;
     padding: $btn-padding;
+    white-space: nowrap;
+    outline: none;
 
     &:hover {
         color: $btn-color-hover;
