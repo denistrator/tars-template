@@ -17,6 +17,7 @@ html, body, .wrapper {
 
 .wrapper {
 	max-width: 1920px;
+	height: 1px; // Если у родительского элемента не установлено height, а указано min-height, то, чтобы дочерний блок занял 100% высоты, нужно родителю поставить свойство height: 1px;
 	margin: 0 auto;
 }
 
