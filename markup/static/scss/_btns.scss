@@ -2,14 +2,16 @@ $btn-color: #333 !default;
 $btn-font-size: 16px !default;
 $btn-font-family: sans-serif !default;
 $btn-font-weight: normal !default;
-$btn-bg: #ddd !default;
-$btn-border: 1px solid $btn-bg !default;
+$btn-text-transform: none !default;
+$btn-bg-color: #dddddd !default;
+$btn-border-color: $btn-bg-color;
+$btn-border: 1px solid $btn-border-color !default;
 $btn-border-radius: 4px !default;
 $btn-padding: 10px 20px !default;
 
-$btn-color-hover:  #333 !default;
-$btn-bg-hover: #ddd !default;
-$btn-border-color-hover: #ddd !default;
+$btn-color-hover: lighten($btn-color, 10%) !default;
+$btn-bg-color-hover: lighten($btn-bg-color, 10%) !default;
+$btn-border-color-hover: lighten($btn-border-color, 10%) !default;
 
 @mixin btn-variants( 
     $color, 
@@ -20,12 +22,12 @@ $btn-border-color-hover: #ddd !default;
     $border-hover: lighten($border, 10%)
     ) {
     color: $color;
-    background: $bg;
+    background-color: $bg;
     border-color: $border;
     @content;
     &:hover {
         color: $color-hover;
-        background: $bg-hover;
+        background-color: $bg-color-hover;
         border-color: $border-hover;
     }
 }
@@ -37,7 +39,11 @@ $btn-border-color-hover: #ddd !default;
 }
 
 .btn {
+    &:not(.prevent-tt) {
+        text-transform: $btn-text-transform;        
+    }
     display: inline-block;
+    max-width: 100%;
     -webkit-user-select: none;
             user-select: none;
     cursor: pointer;
@@ -45,16 +51,18 @@ $btn-border-color-hover: #ddd !default;
     font-weight: $btn-font-weight;
     font-size: $btn-font-size;
     color: $btn-color;
-    background: $btn-bg;
+    background-color: $btn-bg-color;
     border: $btn-border;
     border-radius: $btn-border-radius;
     padding: $btn-padding;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
     outline: none;
 
     &:hover {
         color: $btn-color-hover;
-        background: $btn-bg-hover;
+        background-color: $btn-bg-color-hover;
         border-color: $btn-border-color-hover;
     }
 }
