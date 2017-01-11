@@ -4,13 +4,15 @@ $container-max-width: 1170px !default;
 $container-gutter: $grid-gutter !default;
 
 $breakpoint: ( 
+   xxs: 321px, 
     xs: 480px, 
     sm: 768px, 
-    md: 980px, 
-    lg: 1200px
-);
+    md: 920px, 
+    lg: 1170px
+) !default;
 
 .container {
+    @extend %cf;
     max-width: $container-max-width;
     margin-right: auto;
     margin-left: auto;
@@ -21,6 +23,13 @@ $breakpoint: (
 .row {
     @extend %cf;
     margin: 0 (-$grid-gutter);
+    &-collapse {
+        margin-right: 0;
+        margin-left: 0;
+        & > [class*="col-"] {
+            padding: 0;
+        }
+    }
 }
 
 %cols-base {
