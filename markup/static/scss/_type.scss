@@ -1,13 +1,16 @@
 $body-color: #000 !default;
 $body-bg: #fff !default;
+
 $font-size-base: 16px !default;
-$line-height-base: 1.4 !default;
 $font-family-base: Arial, sans-serif !default;
+$line-height-base: 1.4 !default;
 $margin-bottom-p: 15px !default;
+
 $link-color: blue !default;
-$link-color-hover: lighten($link-color, 10%)!default;
+$link-color-hover: lighten($link-color, 10%) !default;
 $link-decoration: none !default;
-$link-decoration-hover: none!default;
+$link-decoration-hover: none !default;
+
 $heading-font-family: inherit !default;
 $heading-font-weight: 700 !default;
 $heading-font-transform: initial !default;

@@ -1,3 +1,5 @@
+$grid-gutter: 15px !default;
+
 html {
 	box-sizing: border-box;
 }
@@ -12,13 +14,13 @@ html, body, .wrapper {
 	margin: 0;
 	padding: 0;
 	min-height: 100%;
-	min-height: 100vh;
 }
 
 .wrapper {
 	max-width: 1920px;
-	height: 1px; // Если у родительского элемента не установлено height, а указано min-height, то, чтобы дочерний блок занял 100% высоты, нужно родителю поставить свойство height: 1px;
-	margin: 0 auto;
+	min-height: 100vh;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 img {

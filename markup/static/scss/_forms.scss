@@ -1,5 +1,5 @@
-$form-color: red !default;
-$form-bg: #eaeef1 !default;
+$form-color: #202020 !default;
+$form-bg-color: #fff !default;
 $form-border: 1px solid #eaeef1 !default;
 $form-border-radius: 2px !default;
 $form-height: 44px !default;
@@ -55,18 +55,19 @@ $form-label-margin-bottom: 4px !default;
         margin-bottom: $form-margin-bottom;
     }
     &-control {
+        @include placeholder(#ccc);
         width: 100%;
         display: block;
         color: $form-color;
         font-size: $form-font-size;
-        background-color: $form-bg;
+        background-color: $form-bg-color;
         border: $form-border;
         border-radius: $form-border-radius;
         height: $form-height;
         line-height: $form-line-height;
         $padding-y: ($form-height - ($form-font-size * $form-line-height)) / 2;
         padding: $padding-y $form-padding-x;
-        @include placeholder(#fff);
+        outline: none;
     }
     &-label {
         display: block;
