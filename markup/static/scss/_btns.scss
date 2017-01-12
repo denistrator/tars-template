@@ -58,7 +58,6 @@ $btn-border-color-hover: lighten($btn-border-color, 10%) !default;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    outline: none;
 
     &:hover {
         color: $btn-color-hover;
