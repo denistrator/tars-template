@@ -4,7 +4,7 @@ $btn-font-family: sans-serif !default;
 $btn-font-weight: normal !default;
 $btn-text-transform: none !default;
 $btn-bg-color: #dddddd !default;
-$btn-border-color: $btn-bg-color;
+$btn-border-color: $btn-bg-color !default;
 $btn-border: 1px solid $btn-border-color !default;
 $btn-border-radius: 4px !default;
 $btn-padding: 10px 20px !default;
