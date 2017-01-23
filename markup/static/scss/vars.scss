@@ -1,4 +1,99 @@
-// File for scss-vars.
-// For example: main colors, paddings and so on.
+// colors
+$dark: #212121;
+$light: #eee;
 
-$grid-gutter: 15px;
+//grid
+$grid-columns: 12; 
+$grid-gutter: 15px; 
+$container-max-width: 1170px;
+$container-gutter: $grid-gutter;
+
+$breakpoint: ( 
+   xxs: 321px, 
+    xs: 480px, 
+    sm: 768px, 
+    md: 920px, 
+    lg: 1170px
+);
+
+//blocks
+$block-inverse-color:    #fff;
+$block-title-size:       36px;
+$block-description-size: 24px;
+
+$block-image-size:      cover;
+$block-image-position:50% 50%;
+
+$overlay-opacity:        0.65;
+
+$block-title-size:       28px;
+$block-description-size: 15px;
+$block-description-mt:   10px;
+
+//type
+$body-color: #000;
+$body-bg:    #fff;
+
+$font-size-base:   16px;
+$font-family-base: Arial, sans-serif;
+$line-height-base: 1.4;
+$margin-bottom-p:  15px;
+
+$link-color: blue;
+$link-color-hover: lighten($link-color, 10%);
+$link-decoration: none;
+$link-decoration-hover: none;
+
+$heading-font-family: inherit;
+$heading-font-weight: 700;
+$heading-font-transform: initial;
+$heading-color: inherit;
+
+$heading-font-size-1: 36px;
+$heading-margin-1: 1em;
+
+$heading-font-size-2: 30px;
+$heading-margin-2: 1em;
+
+$heading-font-size-3: 24px;
+$heading-margin-3: 1em;
+
+$heading-font-size-4: 18px;
+$heading-margin-4: 1em;
+
+$heading-font-size-5: 14px;
+$heading-margin-5: 1em;
+
+$heading-font-size-6: 12px;
+$heading-margin-6: 1em;
+
+//btns
+$btn-color: #333;
+$btn-font-size: 16px;
+$btn-font-family: sans-serif;
+$btn-font-weight: normal;
+$btn-text-transform: none;
+$btn-bg-color: #dddddd;
+$btn-border-color: $btn-bg-color;
+$btn-border: 1px solid $btn-border-color;
+$btn-border-radius: 4px;
+$btn-padding: 10px 20px;
+
+$btn-color-hover: lighten($btn-color, 10%);
+$btn-bg-color-hover: lighten($btn-bg-color, 10%);
+$btn-border-color-hover: lighten($btn-border-color, 10%);
+
+//forms
+$form-color: #202020;
+$form-bg-color: #fff;
+$form-border: 1px solid #eaeef1;
+$form-border-radius: 2px;
+$form-height: 44px;
+$form-padding-x: 20px;
+$form-font-size: 14px;
+$form-line-height: 1.4;
+$form-margin-bottom: 15px;
+
+$form-label-color: #eaeef1;
+$form-label-font-size: 14px;
+$form-label-margin-bottom: 4px;
