@@ -1,25 +1,25 @@
-$block-inverse-color:   #fff !default;
-$block-title-size:      36px !default;
-$block-description-size:24px !default;
+$block-inverse-color:    #fff !default;
+$block-title-size:       36px !default;
+$block-description-size: 24px !default;
 
 $block-image-size:      cover !default;
-$block-image-position:  50% 50% !default;
+$block-image-position:50% 50% !default;
 
-$overlay-opacity:            0.65 !default;
+$overlay-opacity:        0.65 !default;
 
-$block-title-size:      28px !default;
-$block-description-size:15px !default;
-$block-description-mt:  10px !default;
+$block-title-size:       28px !default;
+$block-description-size: 15px !default;
+$block-description-mt:   10px !default;
 
-$bg-dark: #212121;
-$bg-light: #eee;
+$dark:                #212121 !default;
+$light:                  #eee !default;
 
 .bg {
 	&-dark {
-		background-color: $bg-dark;
+		background-color: $dark;
 	}
 	&-light {
-		background-color: $bg-light;
+		background-color: $light;
 	}
 }
 
@@ -50,7 +50,7 @@ $bg-light: #eee;
 
 	// modificators
 	&-fill-height {
-		height: 100.1vh;
+		min-height: 100.1vh;
 	}
 	&-collapse {
 		padding: 0;
