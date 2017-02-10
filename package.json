@@ -4,7 +4,9 @@
   "description": "Your awesome project description",
   "main": "gulpfile.js",
   "directories": {},
-  "dependencies": {},
+  "dependencies": {
+    "bower": "latest"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "critical": "^0.8.1",
