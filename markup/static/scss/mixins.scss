@@ -44,7 +44,7 @@
   @return $number;
 }
 
-@function in-perc($val, $width: strip-unit($container-max-width - $container-gutter)){
+@function prc($val, $width: strip-unit($container-max-width - $container-gutter)){
     @return ($val / $width * 100%);
 }
 
