@@ -1,0 +1,26 @@
+{
+    "folders": [
+        {
+            "name": "data",
+            "files": [
+                {
+                    "name": "data.js",
+                    "content": "var data = {__componentName__: {}}"
+                }
+            ]
+        }
+    ],
+
+    "files": [
+        {
+            "name": "__componentName__.__templateExtension__",
+            "content": "<section id=\"__componentName__\">\n\t<div class=\"container\">\n\t\t<div class=\"__componentName__-indents\">\n\t\t\t<h2 class=\"__componentName__-block-title block-title\"></h2>\n\t\t\t<div class=\"__componentName__-body\">\n\t\t\t\t\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>"
+        }, {
+            "name": "__componentName__.__cssExtension__",
+            "content": ".__componentName__ {\n\t&-indents {\n\t\tpadding-top:    in-perc(30);\n\t\tpadding-bottom: in-perc(30);\n\t}\n\t&-block-title {\n\t\t\n\t}\n\t&-body {\n\t\tpadding-top:    in-perc(30);\n\t}\n\t\n}"
+        }, {
+            "name": "__componentName__.js",
+            "content": ""
+        }
+    ]
+}
