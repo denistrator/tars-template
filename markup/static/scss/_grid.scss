@@ -22,14 +22,23 @@ $breakpoint: (
 
 .row {
     @extend %cf;
-        margin-left: (-$grid-gutter);
-        margin-right: (-$grid-gutter);
+    margin-left: (-$grid-gutter);
+    margin-right: (-$grid-gutter);
     &-collapse {
         margin-right: 0;
         margin-left: 0;
         & > [class*="col-"] {
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+    &-inds {
+        // vertical indents
+        margin-top: (-$grid-gutter);
+        margin-bottom: (-$grid-gutter);
+        & > [class*="col-"] {
+            padding-top: $grid-gutter;
+            padding-bottom: $grid-gutter;
         }
     }
 }
