@@ -69,3 +69,16 @@ $breakpoint: (
         }
     }
 }
+
+@each $key, $val in $breakpoint {
+    @media all and (min-width: $val) {
+        .hidden-#{$key}-up {
+          display: none !important;
+        }
+    }
+    @media all and (max-width: $val) {
+        .hidden-#{$key}-down {
+          display: none !important;
+        }
+    }
+}
