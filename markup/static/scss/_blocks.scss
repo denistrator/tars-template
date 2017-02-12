@@ -33,14 +33,14 @@ $light:                  #eee !default;
 	background-position: $block-image-position;
 
 	&-title {
-		&:not(.prevent-ta){
+		&:not(.no-ta){
 			text-align: center;
 		}
 		font-size: $block-title-size;
 		margin: 0;
 	}
 	&-desc {
-		&:not(.prevent-ta){
+		&:not(.no-ta){
 			text-align: center;
 		}
 		font-size: $block-description-size;
