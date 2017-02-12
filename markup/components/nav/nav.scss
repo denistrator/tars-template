@@ -1,0 +1,151 @@
+$nav-link-color: #9daeb6 !default;
+$nav-transform-point: 768px !default;
+$nav-toggler-color: #000 !default;
+$nav-toggler-line-color: #fff !default;
+$nav-toggler-line-height: 3px !default;
+$nav-toggler-line-offset: 10px !default;
+.nav {
+    width: 100%;
+    clear: both;
+    overflow: hidden;
+    max-height: 0;
+	
+	will-change: max-height;
+    transition: max-height 0.6s;
+    html.no-js & {
+    	max-height: 999px;
+    }
+    &.open {
+    	max-height: 999px;
+    }
+    @media (min-width: $nav-transform-point) {
+    	max-height: 999px;
+    }
+    &-list {
+        @include nl();
+        padding-top: 15px;
+        overflow: hidden;
+        @media (min-width: $nav-transform-point) {
+            
+        }
+        &--justify {
+        	font-size: 0;
+        	text-align: justify;
+        	&:after {
+        		width: 100%;
+        		height: 0;
+        		content: '';
+        		display: inline-block;
+        	}
+        }
+    }
+    &-item {
+        text-align: right;
+        display: inline-block;
+        width: 100%;
+        html.no-js & {
+            width: auto;
+        }
+        @media (min-width: $nav-transform-point) {
+            width: auto;
+        }
+    }
+    &-link {
+        &:not(.no-tt) {
+            text-transform: uppercase;
+        }
+        display: block;
+        padding: 15px 15px;
+        font-size: 14px;
+        font-weight: 700;
+        color: $nav-link-color;
+        &:hover {
+            color: darken($nav-link-color, 25%);
+        }
+    }
+    &-toggler {
+        position: relative;
+        float: right;
+        font-size: 46px;
+        height: 1em;
+        width: 1em;
+        margin-left: 2.5%;
+        overflow: hidden;
+        border-width: 0;
+        &:focus {
+        	outline-color: rgb(77, 144, 254);
+        	outline-style: solid;
+        	outline-width: 2px;
+        }
+        &:active {
+        	outline: none;
+        }
+
+        background-color: $nav-toggler-color;
+        &:hover {
+        	background-color: lighten($nav-toggler-color, 15%);
+        	$amount: 0.7;
+        	.nav-toggler-line {
+				left: $nav-toggler-line-offset * $amount;
+				right: $nav-toggler-line-offset * $amount;
+        	}
+        	.nav-toggler-line:nth-child(1) { top: $nav-toggler-line-offset * $amount; }
+        	.nav-toggler-line:nth-child(2) {}
+        	.nav-toggler-line:nth-child(3) { bottom: $nav-toggler-line-offset * $amount; }
+        }
+        html.no-js & {
+            display: none;
+        }
+        &-line {
+            display: block;
+            position: absolute;
+            right: $nav-toggler-line-offset;
+            left: $nav-toggler-line-offset;
+            height: $nav-toggler-line-height;
+            background-color: $nav-toggler-line-color;
+
+            transform-origin: center;
+
+            transition: all 0.3s;
+            &:nth-child(1) {
+                top: $nav-toggler-line-offset;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                margin-top: -($nav-toggler-line-height / 2);
+            }
+            &:nth-child(3) {
+                bottom: $nav-toggler-line-offset;
+            }
+        }
+        &.active {
+            .nav-toggler-line:nth-child(1) {
+                top: 0;
+                transform: translateY(21px) rotate(45deg);
+            }
+            .nav-toggler-line:nth-child(2) {
+                top: 0;
+                margin: 0;
+                transform: translateY(21px) rotate(-45deg);
+            }
+            .nav-toggler-line:nth-child(3) {
+                transform: translateY(50px);
+            }
+            &:hover {
+                .nav-toggler-line {
+                    left: ($nav-toggler-line-offset * 0.3);
+                    right: ($nav-toggler-line-offset * 0.3);
+                }
+            }
+            &:active {
+                .nav-toggler-line {
+                    left: ($nav-toggler-line-offset * 0.9);
+                    right: ($nav-toggler-line-offset * 0.9);
+                }
+            }
+        }
+        @media (min-width: $nav-transform-point) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<header class="header">
+	<div class="container">
+		{{> nav/navToggler }}
+		<nav class="nav">
+			<ul class="nav-list nav-list--justify">
+				{{#each navlinks}}
+					<li class="nav-item">
+						<a href="{{link}}" class="nav-link">{{title}}</a>
+					</li>
+				{{/each}}
+			</ul>
+		</nav>
+	</div>
+</header>
