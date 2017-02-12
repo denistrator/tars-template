@@ -5,7 +5,7 @@
             "files": [
                 {
                     "name": "data.js",
-                    "content": "var data = {__componentName__: {}}"
+                    "content": "var data = {\n\tcomponent: [\n\t\t{\n\t\t\t\n\t\t},\n\t\t{\n\t\t\t\n\t\t},\n\t]\n}"
                 }
             ]
         }
